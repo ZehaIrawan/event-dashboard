@@ -21,46 +21,114 @@
     </div>
 
     <!-- Dashboard Content -->
-		<div class="flex flex-col">
+    <div class="flex flex-col">
+      <!-- Header -->
+      <div class="flex justify-between py-6 px-4 h-12">
+        <div class="flex">
+          <img
+            class="w-auto h-12"
+            src="/static/assets/images/header1.png"
+            alt="header1"
+          />
+          <h1 class="mr-6">Passion Economy 2021</h1>
+          <img
+            class="w-auto h-6 mr-6"
+            src="/static/assets/images/chevron.png"
+            alt="chevron"
+          />
+          <span>...</span>
+        </div>
+        <div class="flex">
+          <img
+            class="w-auto h-6"
+            src="/static/assets/images/chain.png"
+            alt="chain"
+          />
+          <h1>Analysis</h1>
 
-			<!-- Header -->
-			<div class="flex justify-between py-6 px-4 h-12">
-				<div class="flex">
-					<img
-          class="w-auto h-12"
-          src="/static/assets/images/header1.png"
-          alt="header1"
-					/>
-					<h1 class="mr-6">Passion Economy 2021</h1>
-					<img
-          class="w-auto h-6 mr-6"
-          src="/static/assets/images/chevron.png"
-          alt="chevron"
-					/>
-					<span>...</span>
-				</div>
-				<div class="flex">
-					<img
-          class="w-auto h-6"
-          src="/static/assets/images/chain.png"
-          alt="chain"
-					/>
-					<h1>Analysis</h1>
+          <button
+            class="rounded-lg text-purple-500 bg-purple-100 px-4 py-6 text-center"
+          >
+            Publish
+          </button>
+          <button class="bg-purple-500 text-white px-4 py-6 text-center">
+            Publish
+          </button>
+        </div>
+      </div>
 
-					<button class="rounded-lg text-purple-500 bg-purple-100 px-4 py-6 text-center">Publish</button>
-					<button class="bg-purple-500 text-white px-4 py-6 text-center">Publish</button>
-				</div>
-			</div>
+      <!-- Tabs -->
+      <div class="mt-12 flex gap-12 px-4">
+        <h1>Overview</h1>
+        <h1>People</h1>
+        <h1>Agenda</h1>
+        <h1>Design</h1>
+        <h1>Emails</h1>
+        <h1>Settings</h1>
+      </div>
 
-			<!-- Tabs -->
-			<div class="mt-12 flex gap-12 px-4">
-				<h1>Overview</h1>
-				<h1>People</h1>
-				<h1>Agenda</h1>
-				<h1>Design</h1>
-				<h1>Emails</h1>
-				<h1>Settings</h1>
-			</div>
-		</div>
-		</body>
-		</html>
+      <!-- Main Card -->
+      <div class="flex border-2 rounded-lg my-6 mx-4 p-4">
+        <div>
+          <img
+            src="/static/assets/images/cam.png"
+            alt="cam icon"
+            class="h-12"
+          />
+        </div>
+
+        <div class="px-4">
+          <div class="flex justify-between">
+            <div>
+              <h1>Summit</h1>
+              <h1 class="font-bold">Passion Economy 2021</h1>
+            </div>
+            <div>
+              <button
+                class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center mr-4 font-semibold"
+              >
+            Copy Link
+              </button>
+              <button
+                class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold"
+              >
+                Manage Event
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-6 flex gap-12">
+            <div>
+              <h1>Event Stats</h1>
+              <span>Ended</span>
+            </div>
+
+            <div>
+              <h1>Date</h1>
+              <span>18 Aug - 20 Aug,2021</span>
+            </div>
+
+            <div>
+              <h1>Event Stats</h1>
+              <span>Ended</span>
+            </div>
+
+            <div>
+              <h1>Presenters</h1>
+              <img
+                src="/static/assets/images/attendees.png"
+                alt="attendees"
+                class="h-10"
+              />
+            </div>
+
+            <div>
+              <h1>Sessions</h1>
+              <span>4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
