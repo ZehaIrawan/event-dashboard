@@ -2,6 +2,8 @@ FROM python:3.9.7-slim-buster
 
 WORKDIR /app
 
+EXPOSE 8000
+
 RUN apt-get update \
   && apt-get install -y build-essential curl \
   && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
@@ -30,4 +32,4 @@ RUN SECRET_KEY=nothing python manage.py tailwind install --no-input;
 RUN SECRET_KEY=nothing python manage.py tailwind build --no-input;
 RUN SECRET_KEY=nothing python manage.py collectstatic --no-input;
 
-CMD ["python", "manage.py", "runserver"]
+CMD ["python", "manage.py", "runserver","0.0.0.0:8000"]
