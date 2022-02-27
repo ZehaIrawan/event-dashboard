@@ -1,4 +1,4 @@
-{% load static tailwind_tags %}
+{% load static tailwind_tags %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,28 +17,34 @@
       class="border-r-2 px-2 h-screen py-6 flex flex-col justify-between w-16"
     >
       <div>
-        <img src="/static/assets/images/sidebar1.png" alt="sidebar1" />
-        <img src="/static/assets/images/sidebar2.png" alt="sidebar2" />
-        <img src="/static/assets/images/sidebar3.png" alt="sidebar3" />
+        <img src="{% static 'assets/images/sidebar1.png' %}" alt="sidebar1" />
+
+        <img src="{% static 'assets/images/sidebar2.png' %}" alt="sidebar2" />
+
+        <img src="{% static 'assets/images/sidebar3.png' %}" alt="sidebar3" />
       </div>
       <img src="/static/assets/images/sidebar4.png" alt="sidebar4" />
     </div>
 
     <!-- Dashboard Content -->
     <div class="flex flex-col w-full px-6">
-       <img src="/static/assets/images/chat.png" class="w-12 absolute right-3 bottom-3" alt="chat icon">
+      <img
+         src="{% static 'assets/images/chat.png' %}"
+        class="w-12 absolute right-3 bottom-3"
+        alt="chat icon"
+      />
       <!-- Header -->
       <div class="flex justify-between h-12 items-center">
         <div class="flex items-center gap-x-1">
           <img
             class="w-auto h-12"
-            src="/static/assets/images/header1.png"
+             src="{% static 'assets/images/header1.png' %}"
             alt="header1"
           />
           <h1 class="mr-6">Passion Economy 2021</h1>
           <img
             class="w-auto h-6 mr-6"
-            src="/static/assets/images/chevron.png"
+             src="{% static 'assets/images/chevron.png' %}"
             alt="chevron"
           />
           <span>...</span>
@@ -268,12 +274,8 @@
             >
           </div>
         </div>
-
       </div>
-
-
     </div>
-    <script>
-    </script>
+    <script></script>
   </body>
 </html>

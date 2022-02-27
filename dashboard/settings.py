@@ -35,10 +35,10 @@ INTERNAL_IPS = [
 
 # Application definition
 INSTALLED_APPS = [
+    "theme",
     "django.contrib.staticfiles",
     "tailwind",
     "django_browser_reload",
-    "theme",
 ]
 
 TAILWIND_APP_NAME = "theme"
