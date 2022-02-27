@@ -6,9 +6,11 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-from pathlib import Path
-import django_heroku
 import mimetypes
+import os
+from pathlib import Path
+
+import django_heroku
 
 mimetypes.add_type("text/css", ".css", True)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,6 +35,7 @@ INTERNAL_IPS = [
 
 # Application definition
 INSTALLED_APPS = [
+    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "tailwind",
     "django_browser_reload",
@@ -109,8 +112,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
-STATIC_ROOT = BASE_DIR / "staticfiles"
-WHITENOISE_MANIFEST_STRICT=False
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# WHITENOISE_MANIFEST_STRICT=False
 
 django_heroku.settings(locals())

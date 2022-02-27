@@ -1,5 +1,6 @@
-{% load static tailwind_tags %} {% load static %}
+{% load static tailwind_tags %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <title>Event Dashboard - Overview</title>
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% tailwind_css %}
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/dist/style.css"> -->
   </head>
 
   <body
@@ -14,7 +16,7 @@
   >
 
   {% include 'partials/_sidebar.html' %}
-  
+
     <!-- Dashboard Content -->
     <div class="flex flex-col w-full px-6">
       <img
