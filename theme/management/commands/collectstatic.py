@@ -1,11 +1,11 @@
-{
-  "name": "dashboard-event",
-  "version": "1.0.0",
-  "description": "Dummy package.json to point the Heroku buildpack at the correct one.",
-  "scripts": {
-    "postinstall": "cd theme/static_src && npm install"
-  },
-  "cacheDirectories": [
-    "theme/static_src/node_modules"
-  ]
-}
+# theme/management/commands/collectstatic.py
+
+from django.core.management import call_command
+from django.contrib.staticfiles.management.commands.collectstatic import (
+    Command as CollectStaticCommand,
+)
+
+class Command(CollectStaticCommand):
+    def handle(self, *args, **options):
+        call_command("tailwind", "build")
+        super().handle(*args, **options)
