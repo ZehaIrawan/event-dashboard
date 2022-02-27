@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Django Tailwind</title>
+    <title>Event Dashboard - Overview</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -14,7 +14,7 @@
   >
     <!-- Sidebar -->
     <div
-      class="border-r-2 px-2 py-6 h-screen flex flex-col justify-between w-16"
+      class="border-r-2 px-2 h-screen py-6 flex flex-col justify-between w-16"
     >
       <div>
         <img src="/static/assets/images/sidebar1.png" alt="sidebar1" />
@@ -26,9 +26,10 @@
 
     <!-- Dashboard Content -->
     <div class="flex flex-col w-full px-6">
+       <img src="/static/assets/images/chat.png" class="w-12 absolute right-3 bottom-3" alt="chat icon">
       <!-- Header -->
-      <div class="flex justify-between py-6 px-4">
-        <div class="flex">
+      <div class="flex justify-between h-12 items-center">
+        <div class="flex items-center gap-x-1">
           <img
             class="w-auto h-12"
             src="/static/assets/images/header1.png"
@@ -42,7 +43,7 @@
           />
           <span>...</span>
         </div>
-        <div class="flex gap-x-4">
+        <div class="flex gap-x-4 items-center">
           <img
             class="w-auto h-6"
             src="/static/assets/images/chain.png"
@@ -58,202 +59,221 @@
           <button
             class="rounded-lg bg-purple-500 text-white px-4 py-2 text-center"
           >
-            Publish
+            Preview Event
           </button>
         </div>
       </div>
 
       <!-- Tabs -->
       <div class="mt-12 flex gap-12 px-4">
-        <h1>Overview</h1>
-        <h1>People</h1>
+        <h1 id="overview">Overview</h1>
+        <h1 id="people">People</h1>
         <h1>Agenda</h1>
         <h1>Design</h1>
         <h1>Emails</h1>
         <h1>Settings</h1>
       </div>
+      <div class="w-full pb-2 bg-red-200"></div>
 
-      <!-- Main Card -->
-      <div class="flex border-2 rounded-lg my-6 mx-4 p-4 w-11/12">
-        <div>
-          <img
-            src="/static/assets/images/cam.png"
-            alt="cam icon"
-            class="h-12"
-          />
-        </div>
-
-        <div class="px-4 w-full">
-          <div class="flex justify-between">
-            <div>
-              <h1>Summit</h1>
-              <h1 class="font-bold">Passion Economy 2021</h1>
-            </div>
-            <div>
-              <button
-                class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center mr-4 font-semibold"
-              >
-                Copy Link
-              </button>
-              <button
-                class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold"
-              >
-                Manage Event
-              </button>
-            </div>
+      <div id="overview-tab-content">
+        <!-- Main Card -->
+        <div class="flex border-2 rounded-lg my-6 mx-4 p-4 w-11/12">
+          <div>
+            <img
+              src="/static/assets/images/cam.png"
+              alt="cam icon"
+              class="h-12"
+            />
           </div>
 
-          <div class="mt-6 flex gap-x-10">
-            <div>
-              <h1>Event Stats</h1>
-              <span>Ended</span>
+          <div class="px-4 w-full">
+            <div class="flex justify-between">
+              <div>
+                <h1>Summit</h1>
+                <h1 class="font-bold">Passion Economy 2021</h1>
+              </div>
+              <div>
+                <button
+                  class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center mr-4 font-semibold"
+                >
+                  Copy Link
+                </button>
+                <button
+                  class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold"
+                >
+                  Manage Event
+                </button>
+              </div>
             </div>
 
-            <div>
-              <h1>Date</h1>
-              <span>18 Aug - 20 Aug,2021</span>
-            </div>
+            <div class="mt-6 flex gap-x-10">
+              <div>
+                <h1>Event Stats</h1>
+                <span>Ended</span>
+              </div>
 
-            <div>
-              <h1>Event Stats</h1>
-              <span>Ended</span>
-            </div>
+              <div>
+                <h1>Date</h1>
+                <span>18 Aug - 20 Aug,2021</span>
+              </div>
 
-            <div>
-              <h1>Presenters</h1>
-              <img
-                src="/static/assets/images/attendees.png"
-                alt="attendees"
-                class="h-10"
-              />
-            </div>
+              <div>
+                <h1>Event Stats</h1>
+                <span>Ended</span>
+              </div>
 
-            <div>
-              <h1>Sessions</h1>
-              <span>4</span>
-            </div>
-          </div>
-        </div>
-      </div>
+              <div>
+                <h1>Presenters</h1>
+                <img
+                  src="/static/assets/images/attendees.png"
+                  alt="attendees"
+                  class="h-10"
+                />
+              </div>
 
-      <!-- Event Stats Header-->
-      <div class="flex justify-between mx-4 my-4 w-11/12">
-        <h1 class="font-semibold text-lg">Event Stats</h1>
-        <button
-          class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold"
-        >
-          Export Report
-        </button>
-      </div>
-      <div
-        class="flex-col flex lg:flex-row justify-between gap-y-6 lg:gap-x-1 w-11/12"
-      >
-        <!-- Event Stats -->
-        <div class="auto-cols-auto grid grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
-            <h1 class="font-bold text-lg">3.9K</h1>
-            <div class="flex gap-4">
-              <span class="text-xs text-green-400 font-semibold">+21%</span>
-              <h1 class="text-gray-500 text-xs">since last week</h1>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
-            <h1 class="font-bold text-lg">3.9K</h1>
-            <div class="flex gap-4">
-              <span class="text-xs text-green-400 font-semibold">+21%</span>
-              <h1 class="text-gray-500 text-xs">since last week</h1>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
-            <h1 class="font-bold text-lg">3.9K</h1>
-            <div class="flex gap-4">
-              <span class="text-xs text-green-400 font-semibold">+21%</span>
-              <h1 class="text-gray-500 text-xs">since last week</h1>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
-            <h1 class="font-bold text-lg">3.9K</h1>
-            <div class="flex gap-4">
-              <span class="text-xs text-green-400 font-semibold">+21%</span>
-              <h1 class="text-gray-500 text-xs">since last week</h1>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
-            <h1 class="font-bold text-lg">3.9K</h1>
-            <div class="flex gap-4">
-              <span class="text-xs text-green-400 font-semibold">+21%</span>
-              <h1 class="text-gray-500 text-xs">since last week</h1>
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
-            <h1 class="font-bold text-lg">3.9K</h1>
-            <div class="flex gap-4">
-              <span class="text-xs text-green-400 font-semibold">+21%</span>
-              <h1 class="text-gray-500 text-xs">since last week</h1>
+              <div>
+                <h1>Sessions</h1>
+                <span>4</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Top Sessions -->
-        <div class="w-full lg:w-1/3">
-          <div class="flex justify-between">
-            <span class="block">Top Sessions</span>
-            <span class="block">By attendance</span>
-          </div>
-
-          <div class="flex flex-col gap-y-6 mt-6">
-
-
-          <!-- Session Component -->
-          <div class="flex flex-col gap-2">
-            <div class="flex justify-between">
-              <span class="block">Keynore - The future of remote work</span>
-              <span class="block">102</span>
-            </div>
-            <div class="w-full rounded-2xl bg-green-200 h-2">
-              <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
-            </div>
-          </div>
-
-          <!-- Session Component -->
-          <div class="flex flex-col gap-2">
-            <div class="flex justify-between">
-              <span class="block">Keynore - The future of remote work</span>
-              <span class="block">102</span>
-            </div>
-            <div class="w-full rounded-2xl bg-green-200 h-2">
-              <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
-            </div>
-          </div>
-          <!-- Session Component -->
-          <div class="flex flex-col gap-2">
-            <div class="flex justify-between">
-              <span class="block">Keynore - The future of remote work</span>
-              <span class="block">102</span>
-            </div>
-            <div class="w-full rounded-2xl bg-green-200 h-2">
-              <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
-            </div>
-          </div>
-
-          </div>
-
-          <a href="#" class="mt-6 block text-purple-500 font-medium"
-            >More details =></a
+        <!-- Event Stats Header-->
+        <div class="flex justify-between mx-4 my-4 w-11/12">
+          <h1 class="font-semibold text-lg">Event Stats</h1>
+          <button
+            class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold"
           >
+            Export Report
+          </button>
         </div>
+        <div
+          class="flex-col flex lg:flex-row justify-between gap-y-6 lg:gap-x-1 w-11/12"
+        >
+          <!-- Event Stats -->
+          <div
+            class="auto-cols-auto grid grid-cols-2 lg:grid-cols-3 gap-6 px-4"
+          >
+            <div
+              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+            >
+              <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+              <h1 class="font-bold text-lg">3.9K</h1>
+              <div class="flex gap-4">
+                <span class="text-xs text-green-400 font-semibold">+21%</span>
+                <h1 class="text-gray-500 text-xs">since last week</h1>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+            >
+              <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+              <h1 class="font-bold text-lg">3.9K</h1>
+              <div class="flex gap-4">
+                <span class="text-xs text-green-400 font-semibold">+21%</span>
+                <h1 class="text-gray-500 text-xs">since last week</h1>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+            >
+              <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+              <h1 class="font-bold text-lg">3.9K</h1>
+              <div class="flex gap-4">
+                <span class="text-xs text-green-400 font-semibold">+21%</span>
+                <h1 class="text-gray-500 text-xs">since last week</h1>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+            >
+              <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+              <h1 class="font-bold text-lg">3.9K</h1>
+              <div class="flex gap-4">
+                <span class="text-xs text-green-400 font-semibold">+21%</span>
+                <h1 class="text-gray-500 text-xs">since last week</h1>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+            >
+              <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+              <h1 class="font-bold text-lg">3.9K</h1>
+              <div class="flex gap-4">
+                <span class="text-xs text-green-400 font-semibold">+21%</span>
+                <h1 class="text-gray-500 text-xs">since last week</h1>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+            >
+              <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+              <h1 class="font-bold text-lg">3.9K</h1>
+              <div class="flex gap-4">
+                <span class="text-xs text-green-400 font-semibold">+21%</span>
+                <h1 class="text-gray-500 text-xs">since last week</h1>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Sessions -->
+          <div class="w-full lg:w-1/3">
+            <div class="flex justify-between">
+              <span class="block">Top Sessions</span>
+              <span class="block">By attendance</span>
+            </div>
+
+            <div class="flex flex-col gap-y-6 mt-6">
+              <!-- Session Component -->
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-between">
+                  <span class="block">Keynore - The future of remote work</span>
+                  <span class="block">102</span>
+                </div>
+                <div class="w-full rounded-2xl bg-green-200 h-2">
+                  <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
+                </div>
+              </div>
+
+              <!-- Session Component -->
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-between">
+                  <span class="block">Keynore - The future of remote work</span>
+                  <span class="block">102</span>
+                </div>
+                <div class="w-full rounded-2xl bg-green-200 h-2">
+                  <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
+                </div>
+              </div>
+              <!-- Session Component -->
+              <div class="flex flex-col gap-2">
+                <div class="flex justify-between">
+                  <span class="block">Keynore - The future of remote work</span>
+                  <span class="block">102</span>
+                </div>
+                <div class="w-full rounded-2xl bg-green-200 h-2">
+                  <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="mt-6 block text-purple-500 font-medium"
+              >More details =></a
+            >
+          </div>
+        </div>
+
       </div>
+
+
     </div>
+    <script>
+    </script>
   </body>
 </html>
