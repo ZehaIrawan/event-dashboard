@@ -12,20 +12,9 @@
   <body
     class="font-serif leading-normal tracking-normal flex w-full bg-gray-50"
   >
-    <!-- Sidebar -->
-    <div
-      class="border-r-2 px-2 h-screen py-6 flex flex-col justify-between w-16"
-    >
-      <div>
-        <img src="{% static 'assets/images/sidebar1.png' %}" alt="sidebar1" />
 
-        <img src="{% static 'assets/images/sidebar2.png' %}" alt="sidebar2" />
-
-        <img src="{% static 'assets/images/sidebar3.png' %}" alt="sidebar3" />
-      </div>
-      <img src="/static/assets/images/sidebar4.png" alt="sidebar4" />
-    </div>
-
+  {% include 'partials/_sidebar.html' %}
+  
     <!-- Dashboard Content -->
     <div class="flex flex-col w-full px-6">
       <img
