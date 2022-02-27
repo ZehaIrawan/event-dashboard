@@ -9,14 +9,18 @@
     {% tailwind_css %}
   </head>
 
-  <body class="font-serif leading-normal tracking-normal flex w-full bg-gray-50">
+  <body
+    class="font-serif leading-normal tracking-normal flex w-full bg-gray-50"
+  >
     <!-- Sidebar -->
     <div
       class="border-r-2 px-2 py-6 h-screen flex flex-col justify-between w-16"
     >
-      <img src="/static/assets/images/sidebar1.png" alt="sidebar1" />
-      <img src="/static/assets/images/sidebar2.png" alt="sidebar2" />
-      <img src="/static/assets/images/sidebar3.png" alt="sidebar3" />
+      <div>
+        <img src="/static/assets/images/sidebar1.png" alt="sidebar1" />
+        <img src="/static/assets/images/sidebar2.png" alt="sidebar2" />
+        <img src="/static/assets/images/sidebar3.png" alt="sidebar3" />
+      </div>
       <img src="/static/assets/images/sidebar4.png" alt="sidebar4" />
     </div>
 
@@ -51,7 +55,9 @@
           >
             Publish
           </button>
-          <button class="rounded-lg bg-purple-500 text-white px-4 py-2 text-center">
+          <button
+            class="rounded-lg bg-purple-500 text-white px-4 py-2 text-center"
+          >
             Publish
           </button>
         </div>
@@ -68,7 +74,7 @@
       </div>
 
       <!-- Main Card -->
-      <div class="flex border-2 rounded-lg my-6 mx-4 p-4">
+      <div class="flex border-2 rounded-lg my-6 mx-4 p-4 w-11/12">
         <div>
           <img
             src="/static/assets/images/cam.png"
@@ -77,7 +83,7 @@
           />
         </div>
 
-        <div class="px-4">
+        <div class="px-4 w-full">
           <div class="flex justify-between">
             <div>
               <h1>Summit</h1>
@@ -97,7 +103,7 @@
             </div>
           </div>
 
-          <div class="mt-6 flex gap-12">
+          <div class="mt-6 flex gap-x-10">
             <div>
               <h1>Event Stats</h1>
               <span>Ended</span>
@@ -131,7 +137,7 @@
       </div>
 
       <!-- Event Stats Header-->
-      <div class="flex justify-between  mx-4 my-4">
+      <div class="flex justify-between mx-4 my-4 w-11/12">
         <h1 class="font-semibold text-lg">Event Stats</h1>
         <button
           class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold"
@@ -139,10 +145,12 @@
           Export Report
         </button>
       </div>
-      <div class="flex-col flex lg:flex-row justify-between gap-y-6 lg:gap-x-1 w-full">
+      <div
+        class="flex-col flex lg:flex-row justify-between gap-y-6 lg:gap-x-1 w-11/12"
+      >
         <!-- Event Stats -->
         <div class="auto-cols-auto grid grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-          <div class="bg-white py-6 px-12 border border-gray-200 rounded-lg">
+          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
             <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
             <div class="flex gap-4">
@@ -151,7 +159,7 @@
             </div>
           </div>
 
-          <div class="bg-white py-6 px-12 border border-gray-200 rounded-lg">
+          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
             <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
             <div class="flex gap-4">
@@ -160,7 +168,7 @@
             </div>
           </div>
 
-          <div class="bg-white py-6 px-12 border border-gray-200 rounded-lg">
+          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
             <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
             <div class="flex gap-4">
@@ -169,7 +177,7 @@
             </div>
           </div>
 
-          <div class="bg-white py-6 px-12 border border-gray-200 rounded-lg">
+          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
             <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
             <div class="flex gap-4">
@@ -178,7 +186,7 @@
             </div>
           </div>
 
-          <div class="bg-white py-6 px-12 border border-gray-200 rounded-lg">
+          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
             <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
             <div class="flex gap-4">
@@ -187,7 +195,7 @@
             </div>
           </div>
 
-          <div class="bg-white py-6 px-12 border border-gray-200 rounded-lg">
+          <div class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg">
             <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
             <div class="flex gap-4">
@@ -204,41 +212,46 @@
             <span class="block">By attendance</span>
           </div>
 
-					<!-- Session Component -->
-					<div class="flex flex-col gap-2">
-						<div class="flex justify-between">
-							<span class="block">Keynore - The future of remote work</span>
-							<span class="block">102</span>
-						</div>
-						<div class="w-full rounded-2xl bg-green-200 h-3">
-							<div class="bg-green-400 h-3 rounded-lg w-2/3"></div>
-						</div>
-					</div>
-
-							<!-- Session Component -->
-					<div class="flex flex-col gap-2">
-						<div class="flex justify-between">
-							<span class="block">Keynore - The future of remote work</span>
-							<span class="block">102</span>
-						</div>
-						<div class="w-full rounded-2xl bg-green-200 h-3">
-							<div class="bg-green-400 h-3 rounded-lg w-2/3"></div>
-						</div>
-					</div>
-							<!-- Session Component -->
-					<div class="flex flex-col gap-2">
-						<div class="flex justify-between">
-							<span class="block">Keynore - The future of remote work</span>
-							<span class="block">102</span>
-						</div>
-						<div class="w-full rounded-2xl bg-green-200 h-3">
-							<div class="bg-green-400 h-3 rounded-lg w-2/3"></div>
-						</div>
-					</div>
-
-					<a href="#" class="mt-6 block text-purple-500 font-medium">More details =></a>
+          <div class="flex flex-col gap-y-6 mt-6">
 
 
+          <!-- Session Component -->
+          <div class="flex flex-col gap-2">
+            <div class="flex justify-between">
+              <span class="block">Keynore - The future of remote work</span>
+              <span class="block">102</span>
+            </div>
+            <div class="w-full rounded-2xl bg-green-200 h-2">
+              <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
+            </div>
+          </div>
+
+          <!-- Session Component -->
+          <div class="flex flex-col gap-2">
+            <div class="flex justify-between">
+              <span class="block">Keynore - The future of remote work</span>
+              <span class="block">102</span>
+            </div>
+            <div class="w-full rounded-2xl bg-green-200 h-2">
+              <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
+            </div>
+          </div>
+          <!-- Session Component -->
+          <div class="flex flex-col gap-2">
+            <div class="flex justify-between">
+              <span class="block">Keynore - The future of remote work</span>
+              <span class="block">102</span>
+            </div>
+            <div class="w-full rounded-2xl bg-green-200 h-2">
+              <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
+            </div>
+          </div>
+
+          </div>
+
+          <a href="#" class="mt-6 block text-purple-500 font-medium"
+            >More details =></a
+          >
         </div>
       </div>
     </div>
