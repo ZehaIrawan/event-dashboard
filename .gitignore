@@ -53,7 +53,6 @@ atlassian-ide-plugin.xml
 # Distribution / packaging
 .Python build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -138,5 +137,3 @@ GitHub.sublime-settings
 .history
 
 dashbaord.pem
-
-**/dist/styles.css
