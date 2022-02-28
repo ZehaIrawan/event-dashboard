@@ -2,7 +2,10 @@
 <div
   class="border-b-2 md:border-r-2 px-2 py-6 flex flex-row md:flex-col md:h-screen md:justify-start justify-between md:w-16 gap-y-6"
 >
- <img src="/static/assets/images/heysummit-logo.svg" alt="heysummit-logo" />
+ <img class="hidden md:block" src="/static/assets/images/heysummit-logo.svg" alt="heysummit-logo" />
+
+<img class="md:hidden h-12" src="https://global-uploads.webflow.com/602beff93642842e37cfd20c/60677023f4f8b170027be482_HS%20brand%20colors%20long-01.svg" alt="heysummit-logo">
+
 
  <div class="hidden md:block text-red-400 bg-red-100 p-2 rounded-lg">
       <svg
@@ -40,10 +43,9 @@
       </svg>
     </div>
 
-    <div class="md:hidden h-12 w-12" onclick="openNav()">
+    <div id="hamburger-icon" class="h-12 w-12" onclick="openNav()">
     <svg
-      id="hamburger-icon"
-      className="fill-current hover:text-black"
+      className="md:hidden fill-current hover:text-black"
       viewBox="0 0 24 24"
     >
       <path
@@ -54,9 +56,8 @@
     </div>
 
 
-<div class="hidden  h-12 w-12"  onclick="closeNav()">
+<div   id="close-icon"  class="hidden h-12 w-12" onclick="closeNav()">
      <svg
-      id="close-icon"
       className="h-12 w-12 fill-current hover:text-black"
       viewBox="0 0 24 24"
     >

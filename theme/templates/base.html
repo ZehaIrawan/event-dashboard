@@ -254,30 +254,21 @@
       </div>
     </div>
     <script>
-      // let isOpen = false;
       let isOpen = false;
 
-
-      // if(isOpen){
-      //   document.getElementById('hamburger-icon').style.display = 'none';
-      //   document.getElementById('close-icon').style.display = 'block';
-      // }
-
-      // if(!isOpen){
-      //   document.getElementById('hamburger-icon').style.display = 'block';
-      //   document.getElementById('close-icon').style.display = 'none';
-      // }
-
+        // document.getElementById('hamburger-icon').classList.add('hidden');
       function openNav() {
-        document.getElementById('close-icon').classList.remove = 'hidden';
-        document.getElementById('hamburger-icon').style.display = 'none';
-        document.getElementById('close-icon').style.display = 'block';
+        document.getElementById('close-icon').classList.remove('hidden');
+        document.getElementById('close-icon').classList.add('block')
+        document.getElementById('hamburger-icon').classList.add('hidden');
         isOpen = true;
       }
 
       function closeNav() {
-        document.getElementById('hamburger-icon').style.display = 'block';
-        document.getElementById('close-icon').style.display = 'none';
+        document.getElementById('hamburger-icon').classList.add('block')
+        document.getElementById('hamburger-icon').classList.remove('hidden')
+        document.getElementById('close-icon').classList.add('hidden');
+        document.getElementById('close-icon').classList.remove('block');
         isOpen = false;
       }
     </script>
