@@ -2,249 +2,233 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-  <head>
-    <title>Event Dashboard - Overview</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    {% tailwind_css %}
-  </head>
 
-  <body
-    class="leading-normal tracking-normal flex flex-col md:flex-row w-full bg-gray-50"
-  >
+<head>
+  <title>Event Dashboard - Overview</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  {% tailwind_css %}
+</head>
+
+<body class="leading-normal tracking-normal flex flex-col md:flex-row w-full bg-gray-50">
 
   {% include 'partials/_sidebar.html' %}
 
-    <!-- Dashboard Content -->
-    <div class="flex flex-col w-full px-1 md:px-6">
-      <img
-         src="{% static 'assets/images/chat.png' %}"
-        class="hidden md:block w-20 absolute right-3 bottom-3"
-        alt="chat icon"
-      />
-      <!-- Header -->
-      <div class="mt-6 mb-8 mx-2 flex flex-wrap justify-between h-12 items-center">
-        <div class="flex items-center gap-x-6">
-          <div class="bg-gray-200 py-2 px-3 rounded-lg">
-            <img
-            class="w-auto h-5"
-            src="{% static 'assets/images/clickup-logo.svg' %}"
-            alt="header1"
-            />
+  <!-- Dashboard Content -->
+  <div class="flex flex-col w-full px-1 md:px-6 overflow-x-hidden">
+    <img src="{% static 'assets/images/chat.png' %}" class="hidden md:block w-20 absolute right-3 bottom-3"
+      alt="chat icon" />
+    <!-- Header -->
+    <div class="mt-6 md:mb-8 mx-2 flex flex-wrap justify-between md:h-12 items-center">
+      <div class="flex items-center gap-x-6">
+        <div class="bg-gray-200 py-2 px-3 rounded-lg">
+          <img class="w-auto h-5" src="{% static 'assets/images/clickup-logo.svg' %}" alt="header1" />
 
-          </div>
-          <h1>Passion Economy 2021</h1>
+        </div>
+        <h1>Passion Economy 2021</h1>
 
-          <!-- Chevron -->
+        <!-- Chevron -->
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          <path d="M1 1L5 5L9 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
 
 
-          <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.84615 3.69231C1.35652 3.69231 0.886947 3.4978 0.540726 3.15158C0.194505 2.80536 0 2.33578 0 1.84615C0 1.35652 0.194505 0.886947 0.540726 0.540726C0.886947 0.194505 1.35652 0 1.84615 0C2.33578 0 2.80536 0.194505 3.15158 0.540726C3.4978 0.886947 3.69231 1.35652 3.69231 1.84615C3.69231 2.33578 3.4978 2.80536 3.15158 3.15158C2.80536 3.4978 2.33578 3.69231 1.84615 3.69231ZM8 3.69231C7.51037 3.69231 7.04079 3.4978 6.69457 3.15158C6.34835 2.80536 6.15385 2.33578 6.15385 1.84615C6.15385 1.35652 6.34835 0.886947 6.69457 0.540726C7.04079 0.194505 7.51037 0 8 0C8.48963 0 8.95921 0.194505 9.30543 0.540726C9.65165 0.886947 9.84615 1.35652 9.84615 1.84615C9.84615 2.33578 9.65165 2.80536 9.30543 3.15158C8.95921 3.4978 8.48963 3.69231 8 3.69231ZM14.1538 3.69231C13.6642 3.69231 13.1946 3.4978 12.8484 3.15158C12.5022 2.80536 12.3077 2.33578 12.3077 1.84615C12.3077 1.35652 12.5022 0.886947 12.8484 0.540726C13.1946 0.194505 13.6642 0 14.1538 0C14.6435 0 15.1131 0.194505 15.4593 0.540726C15.8055 0.886947 16 1.35652 16 1.84615C16 2.33578 15.8055 2.80536 15.4593 3.15158C15.1131 3.4978 14.6435 3.69231 14.1538 3.69231Z" fill="black"/>
-</svg>
+        <svg width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.84615 3.69231C1.35652 3.69231 0.886947 3.4978 0.540726 3.15158C0.194505 2.80536 0 2.33578 0 1.84615C0 1.35652 0.194505 0.886947 0.540726 0.540726C0.886947 0.194505 1.35652 0 1.84615 0C2.33578 0 2.80536 0.194505 3.15158 0.540726C3.4978 0.886947 3.69231 1.35652 3.69231 1.84615C3.69231 2.33578 3.4978 2.80536 3.15158 3.15158C2.80536 3.4978 2.33578 3.69231 1.84615 3.69231ZM8 3.69231C7.51037 3.69231 7.04079 3.4978 6.69457 3.15158C6.34835 2.80536 6.15385 2.33578 6.15385 1.84615C6.15385 1.35652 6.34835 0.886947 6.69457 0.540726C7.04079 0.194505 7.51037 0 8 0C8.48963 0 8.95921 0.194505 9.30543 0.540726C9.65165 0.886947 9.84615 1.35652 9.84615 1.84615C9.84615 2.33578 9.65165 2.80536 9.30543 3.15158C8.95921 3.4978 8.48963 3.69231 8 3.69231ZM14.1538 3.69231C13.6642 3.69231 13.1946 3.4978 12.8484 3.15158C12.5022 2.80536 12.3077 2.33578 12.3077 1.84615C12.3077 1.35652 12.5022 0.886947 12.8484 0.540726C13.1946 0.194505 13.6642 0 14.1538 0C14.6435 0 15.1131 0.194505 15.4593 0.540726C15.8055 0.886947 16 1.35652 16 1.84615C16 2.33578 15.8055 2.80536 15.4593 3.15158C15.1131 3.4978 14.6435 3.69231 14.1538 3.69231Z"
+            fill="black" />
+        </svg>
 
-        </div>
-        <div class="flex gap-x-4 items-center">
-          <img
-            class="w-16 h-6"
-       src="{% static 'assets/images/green-chain.svg' %}"
-            alt="chain"
-          />
-          <h1>Analysis</h1>
-
-          <button
-            class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center"
-          >
-            Publish
-          </button>
-          <button
-            class="flex justify-center items-center gap-x-2 rounded-lg bg-purple-500 text-white px-4 py-2 text-center whitespace-nowrap"
-          >
-            Preview Event
-                   <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-          </button>
-        </div>
       </div>
+      <div class="mt-4 md:mt-0 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-4 items-center w-full md:w-auto">
+        <img class="ml-auto w-16 h-6" src="{% static 'assets/images/green-chain.svg' %}" alt="chain" />
+        <h1>Analysis</h1>
 
-      <!-- Tabs -->
-      <div class="mt-6 md:mt-0 flex md:gap-x-12 flex-wrap mx-2 md:flex-row">
-        <hr></hr>
-        <h1 id="overview" class="hover:underline hover:cursor-pointer">Overview</h1>
-        <h1 id="people">People</h1>
-        <h1>Agenda</h1>
-        <h1>Design</h1>
-        <h1>Emails</h1>
-        <h1>Settings</h1>
+        <button class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center">
+          Publish
+        </button>
+        <button
+          class="flex justify-center items-center gap-x-2 rounded-lg bg-purple-500 text-white px-4 py-2 text-center whitespace-nowrap">
+          Preview Event
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
       </div>
-      <!-- <div class="w-full pb-2 bg-red-200"></div> -->
+    </div>
 
-      <div id="overview-tab-content">
+    <!-- Tabs -->
+    <div
+      class="mt-6 md:mt-0 flex md:gap-x-12 md:flex-wrap mx-2 md:flex-row overflow-x-scroll no-scrollbar snap-x snap-mandatory">
+      <!-- <hr>
+      </hr> -->
+      <h1 id="overview" class="hover:underline hover:cursor-pointer p-2 snap-start">Overview</h1>
+      <h1 id="people" class="hover:underline hover:cursor-pointer p-2 snap-start">People</h1>
+      <h1 class="hover:underline hover:cursor-pointer p-2 snap-start">Agenda</h1>
+      <h1 class="hover:underline hover:cursor-pointer p-2 snap-start">Design</h1>
+      <h1 class="hover:underline hover:cursor-pointer p-2 snap-start">Emails</h1>
+      <h1 class="hover:underline hover:cursor-pointer p-2 snap-start">Settings</h1>
+    </div>
+    <!-- <div class="w-full pb-2 bg-red-200"></div> -->
 
-          {% include 'partials/_event_main_card.html' %}
-        <!-- Event Stats Header-->
-        <div class="flex justify-between mx-2 md:mx-4 my-4  w-full md:w-11/12">
-          <h1 class="font-semibold text-lg">Event Stats</h1>
-          <button
-            class="flex justify-center items-center gap-x-2 rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold"
-          >
+    <div id="overview-tab-content">
+
+      {% include 'partials/_event_main_card.html' %}
+      <!-- Event Stats Header-->
+      <div class="flex justify-between items-center px-2 md:mx-4 my-4 w-full md:w-11/12">
+        <h1 class="font-semibold text-lg">Event Stats</h1>
+        <button
+          class="flex justify-center items-center gap-x-2 rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold">
           <!-- Download Icon -->
           <svg width="13" height="15" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.29 11.29C5.19627 11.383 5.12188 11.4936 5.07111 11.6154C5.02034 11.7373 4.9942 11.868 4.9942 12C4.9942 12.132 5.02034 12.2627 5.07111 12.3846C5.12188 12.5064 5.19627 12.617 5.29 12.71L8.29 15.71C8.38296 15.8037 8.49356 15.8781 8.61542 15.9289C8.73728 15.9797 8.86799 16.0058 9 16.0058C9.13201 16.0058 9.26272 15.9797 9.38458 15.9289C9.50644 15.8781 9.61704 15.8037 9.71 15.71L12.71 12.71C12.8983 12.5217 13.0041 12.2663 13.0041 12C13.0041 11.7337 12.8983 11.4783 12.71 11.29C12.5217 11.1017 12.2663 10.9959 12 10.9959C11.7337 10.9959 11.4783 11.1017 11.29 11.29L10 12.59V1C10 0.734784 9.89464 0.48043 9.70711 0.292893C9.51957 0.105357 9.26522 0 9 0C8.73478 0 8.48043 0.105357 8.29289 0.292893C8.10536 0.48043 8 0.734784 8 1V12.59L6.71 11.29C6.61704 11.1963 6.50644 11.1219 6.38458 11.0711C6.26272 11.0203 6.13201 10.9942 6 10.9942C5.86799 10.9942 5.73728 11.0203 5.61542 11.0711C5.49356 11.1219 5.38296 11.1963 5.29 11.29ZM15 7H13C12.7348 7 12.4804 7.10536 12.2929 7.29289C12.1054 7.48043 12 7.73478 12 8C12 8.26522 12.1054 8.51957 12.2929 8.70711C12.4804 8.89464 12.7348 9 13 9H15C15.2652 9 15.5196 9.10536 15.7071 9.29289C15.8946 9.48043 16 9.73478 16 10V17C16 17.2652 15.8946 17.5196 15.7071 17.7071C15.5196 17.8946 15.2652 18 15 18H3C2.73478 18 2.48043 17.8946 2.29289 17.7071C2.10536 17.5196 2 17.2652 2 17V10C2 9.73478 2.10536 9.48043 2.29289 9.29289C2.48043 9.10536 2.73478 9 3 9H5C5.26522 9 5.51957 8.89464 5.70711 8.70711C5.89464 8.51957 6 8.26522 6 8C6 7.73478 5.89464 7.48043 5.70711 7.29289C5.51957 7.10536 5.26522 7 5 7H3C2.20435 7 1.44129 7.31607 0.87868 7.87868C0.316071 8.44129 0 9.20435 0 10V17C0 17.7956 0.316071 18.5587 0.87868 19.1213C1.44129 19.6839 2.20435 20 3 20H15C15.7956 20 16.5587 19.6839 17.1213 19.1213C17.6839 18.5587 18 17.7956 18 17V10C18 9.20435 17.6839 8.44129 17.1213 7.87868C16.5587 7.31607 15.7956 7 15 7Z" fill="currentColor"/>
-</svg>
+            <path
+              d="M5.29 11.29C5.19627 11.383 5.12188 11.4936 5.07111 11.6154C5.02034 11.7373 4.9942 11.868 4.9942 12C4.9942 12.132 5.02034 12.2627 5.07111 12.3846C5.12188 12.5064 5.19627 12.617 5.29 12.71L8.29 15.71C8.38296 15.8037 8.49356 15.8781 8.61542 15.9289C8.73728 15.9797 8.86799 16.0058 9 16.0058C9.13201 16.0058 9.26272 15.9797 9.38458 15.9289C9.50644 15.8781 9.61704 15.8037 9.71 15.71L12.71 12.71C12.8983 12.5217 13.0041 12.2663 13.0041 12C13.0041 11.7337 12.8983 11.4783 12.71 11.29C12.5217 11.1017 12.2663 10.9959 12 10.9959C11.7337 10.9959 11.4783 11.1017 11.29 11.29L10 12.59V1C10 0.734784 9.89464 0.48043 9.70711 0.292893C9.51957 0.105357 9.26522 0 9 0C8.73478 0 8.48043 0.105357 8.29289 0.292893C8.10536 0.48043 8 0.734784 8 1V12.59L6.71 11.29C6.61704 11.1963 6.50644 11.1219 6.38458 11.0711C6.26272 11.0203 6.13201 10.9942 6 10.9942C5.86799 10.9942 5.73728 11.0203 5.61542 11.0711C5.49356 11.1219 5.38296 11.1963 5.29 11.29ZM15 7H13C12.7348 7 12.4804 7.10536 12.2929 7.29289C12.1054 7.48043 12 7.73478 12 8C12 8.26522 12.1054 8.51957 12.2929 8.70711C12.4804 8.89464 12.7348 9 13 9H15C15.2652 9 15.5196 9.10536 15.7071 9.29289C15.8946 9.48043 16 9.73478 16 10V17C16 17.2652 15.8946 17.5196 15.7071 17.7071C15.5196 17.8946 15.2652 18 15 18H3C2.73478 18 2.48043 17.8946 2.29289 17.7071C2.10536 17.5196 2 17.2652 2 17V10C2 9.73478 2.10536 9.48043 2.29289 9.29289C2.48043 9.10536 2.73478 9 3 9H5C5.26522 9 5.51957 8.89464 5.70711 8.70711C5.89464 8.51957 6 8.26522 6 8C6 7.73478 5.89464 7.48043 5.70711 7.29289C5.51957 7.10536 5.26522 7 5 7H3C2.20435 7 1.44129 7.31607 0.87868 7.87868C0.316071 8.44129 0 9.20435 0 10V17C0 17.7956 0.316071 18.5587 0.87868 19.1213C1.44129 19.6839 2.20435 20 3 20H15C15.7956 20 16.5587 19.6839 17.1213 19.1213C17.6839 18.5587 18 17.7956 18 17V10C18 9.20435 17.6839 8.44129 17.1213 7.87868C16.5587 7.31607 15.7956 7 15 7Z"
+              fill="currentColor" />
+          </svg>
 
-            Export Report
-          </button>
+          Export Report
+        </button>
+      </div>
+      <div class="flex-col flex lg:flex-row justify-between gap-y-6 lg:gap-x-1 w-full md:w-11/12">
+        <!-- Event Stats -->
+        <div class="px-2 grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 md:px-4 w-full">
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
+            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+            <h1 class="font-bold text-lg">3.9K</h1>
+            <div class="flex items-baseline flex-wrap gap-y-2">
+
+              <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z"
+                  fill="#27CE9C" />
+              </svg>
+
+              <span class="text-xs text-green-400 font-semibold mr-2">+21%</span>
+              <h1 class="text-gray-500 text-xs  whitespace-nowrap">since last week</h1>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
+            <h1 class="text-gray-500 font-semibold text-sm">Page Views</h1>
+            <h1 class="font-bold text-lg">1.2M</h1>
+            <div class="flex items-baseline flex-wrap gap-y-2">
+              <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z"
+                  fill="#27CE9C" />
+              </svg>
+              <span class="text-xs text-green-400 font-semibold mr-2">+21%</span>
+              <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+            </div>
+          </div>
+
+          <div class="text-left flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
+            <h1 class="text-gray-500 font-semibold text-sm">Invited</h1>
+            <h1 class="font-bold text-lg">0</h1>
+            <div class="flex gap-4">
+              <h1 class="text-gray-500 text-xs">No invites sent yet</h1>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
+            <h1 class="text-gray-500 font-semibold text-sm">Revenue</h1>
+            <h1 class="font-bold text-lg">$12.6K</h1>
+            <div class="flex items-baseline flex-wrap gap-y-2">
+              <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z"
+                  fill="#27CE9C" />
+              </svg>
+              <span class="text-xs text-green-400 font-semibold mr-2">+11%</span>
+              <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
+            <h1 class="text-gray-500 font-semibold text-sm">Attendees</h1>
+            <h1 class="font-bold text-lg">2.8K</h1>
+            <div class="flex items-baseline flex-wrap gap-y-2">
+              <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.29558 7.67579C7.21517 7.77432 7.09923 7.85618 6.95946 7.9131C6.81969 7.97002 6.66104 8 6.49954 8C6.33803 8 6.17939 7.97002 6.03962 7.9131C5.89985 7.85618 5.78391 7.77432 5.7035 7.67579L0.133673 1.00961C-0.237541 0.565086 0.208402 0 0.929709 0L12.0702 0C12.7923 0 13.2374 0.565657 12.8662 1.00961L7.29558 7.67579Z"
+                  fill="#FE457E" />
+              </svg>
+
+              <span class="mr-2 text-xs text-red-400 font-semibold">-21%</span>
+              <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg ">
+            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+            <h1 class="font-bold text-lg">3.9K</h1>
+            <div class="flex items-baseline flex-wrap gap-y-2">
+              <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z"
+                  fill="#27CE9C" />
+              </svg>
+              <span class="mr-2 text-xs text-green-400 font-semibold">+21%</span>
+              <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+            </div>
+          </div>
         </div>
-        <div
-          class="flex-col flex lg:flex-row justify-between gap-y-6 lg:gap-x-1 w-11/12"
-        >
-          <!-- Event Stats -->
-          <div
-            class="mx-2 grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 md:px-4"
-          >
-            <div
-              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
-            >
-              <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
-              <h1 class="font-bold text-lg">3.9K</h1>
-              <div class="flex items-baseline flex-wrap gap-y-2">
 
-                <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z" fill="#27CE9C"/>
-</svg>
+        <!-- Top Sessions -->
+        <div class="px-2 md:m-0 w-full lg:w-1/3">
+          <div class="flex justify-between">
+            <span class="block">Top Sessions</span>
+            <span class="flex justify-center items-center gap-x-2">By attendance
+              <!-- Chevron -->
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
 
-                <span class="text-xs text-green-400 font-semibold mr-2">+21%</span>
-                <h1 class="text-gray-500 text-xs  whitespace-nowrap">since last week</h1>
+          <div class="flex flex-col gap-y-6 mt-6">
+            <!-- Session Component -->
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between">
+                <span class="block">Keynore - The future of remote work</span>
+                <span class="block">102</span>
+              </div>
+              <div class="w-full rounded-2xl bg-green-200 h-2">
+                <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
               </div>
             </div>
 
-            <div
-              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
-            >
-              <h1 class="text-gray-500 font-semibold text-sm">Page Views</h1>
-              <h1 class="font-bold text-lg">1.2M</h1>
-              <div class="flex items-baseline flex-wrap gap-y-2">
-                 <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z" fill="#27CE9C"/>
-</svg>
-                <span class="text-xs text-green-400 font-semibold mr-2">+21%</span>
-                <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+            <!-- Session Component -->
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between">
+                <span class="block">Keynore - The future of remote work</span>
+                <span class="block">102</span>
+              </div>
+              <div class="w-full rounded-2xl bg-green-200 h-2">
+                <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
               </div>
             </div>
-
-            <div
-              class="text-left flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
-            >
-              <h1 class="text-gray-500 font-semibold text-sm">Invited</h1>
-              <h1 class="font-bold text-lg">0</h1>
-              <div class="flex gap-4">
-                <h1 class="text-gray-500 text-xs">No invites sent yet</h1>
+            <!-- Session Component -->
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between">
+                <span class="block">Keynore - The future of remote work</span>
+                <span class="block">102</span>
               </div>
-            </div>
-
-            <div
-              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
-            >
-              <h1 class="text-gray-500 font-semibold text-sm">Revenue</h1>
-              <h1 class="font-bold text-lg">$12.6K</h1>
-              <div class="flex items-baseline flex-wrap gap-y-2">
-                         <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z" fill="#27CE9C"/>
-</svg>
-                <span class="text-xs text-green-400 font-semibold mr-2">+11%</span>
-                <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
-              </div>
-            </div>
-
-            <div
-              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
-            >
-              <h1 class="text-gray-500 font-semibold text-sm">Attendees</h1>
-              <h1 class="font-bold text-lg">2.8K</h1>
-              <div class="flex items-baseline flex-wrap gap-y-2">
-                <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.29558 7.67579C7.21517 7.77432 7.09923 7.85618 6.95946 7.9131C6.81969 7.97002 6.66104 8 6.49954 8C6.33803 8 6.17939 7.97002 6.03962 7.9131C5.89985 7.85618 5.78391 7.77432 5.7035 7.67579L0.133673 1.00961C-0.237541 0.565086 0.208402 0 0.929709 0L12.0702 0C12.7923 0 13.2374 0.565657 12.8662 1.00961L7.29558 7.67579Z" fill="#FE457E"/>
-</svg>
-
-                <span class="mr-2 text-xs text-red-400 font-semibold">-21%</span>
-                <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
-              </div>
-            </div>
-
-            <div
-              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg "
-            >
-              <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
-              <h1 class="font-bold text-lg">3.9K</h1>
-              <div class="flex items-baseline flex-wrap gap-y-2">
-                <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z" fill="#27CE9C"/>
-</svg>
-<span class="mr-2 text-xs text-green-400 font-semibold">+21%</span>
-                <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+              <div class="w-full rounded-2xl bg-green-200 h-2">
+                <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
               </div>
             </div>
           </div>
 
-          <!-- Top Sessions -->
-          <div class="mx-2 md:m-0 w-full lg:w-1/3">
-            <div class="flex justify-between">
-              <span class="block">Top Sessions</span>
-              <span class="flex justify-center items-center gap-x-2">By attendance
-                <!-- Chevron -->
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L5 5L9 1" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-              </span>
-            </div>
-
-            <div class="flex flex-col gap-y-6 mt-6">
-              <!-- Session Component -->
-              <div class="flex flex-col gap-2">
-                <div class="flex justify-between">
-                  <span class="block">Keynore - The future of remote work</span>
-                  <span class="block">102</span>
-                </div>
-                <div class="w-full rounded-2xl bg-green-200 h-2">
-                  <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
-                </div>
-              </div>
-
-              <!-- Session Component -->
-              <div class="flex flex-col gap-2">
-                <div class="flex justify-between">
-                  <span class="block">Keynore - The future of remote work</span>
-                  <span class="block">102</span>
-                </div>
-                <div class="w-full rounded-2xl bg-green-200 h-2">
-                  <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
-                </div>
-              </div>
-              <!-- Session Component -->
-              <div class="flex flex-col gap-2">
-                <div class="flex justify-between">
-                  <span class="block">Keynore - The future of remote work</span>
-                  <span class="block">102</span>
-                </div>
-                <div class="w-full rounded-2xl bg-green-200 h-2">
-                  <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
-                </div>
-              </div>
-            </div>
-
-            <a href="#" class="mt-6 block text-purple-500 font-medium"
-              >More details →</a
-            >
-          </div>
+          <a href="#" class="mt-6 block text-purple-500 font-medium">More details →</a>
         </div>
       </div>
     </div>
-    <script>
+  </div>
+  <script>
 //       let isOpen = false;
 
 //       document.getElementById('close-icon').style.display = 'none'
@@ -261,6 +245,7 @@
 //       function myFunction() {
 //   document.getElementById("myDIV").classList.toggle("newClass");
 // }
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
