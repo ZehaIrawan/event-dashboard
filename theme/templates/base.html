@@ -45,7 +45,7 @@
         <img class="ml-auto w-16 h-6" src="{% static 'assets/images/green-chain.svg' %}" alt="chain" />
         <h1>Analysis</h1>
 
-        <button class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center">
+        <button class="rounded-lg text-purple-500 bg-purple-100 px-2 py-2 text-center">
           Publish
         </button>
         <button
@@ -60,16 +60,42 @@
     </div>
 
     <!-- Tabs -->
-    <div
-      class="mt-6 md:mt-0 flex md:gap-x-12 md:flex-wrap mx-2 md:flex-row overflow-x-scroll no-scrollbar snap-x snap-mandatory">
-      <!-- <hr>
-      </hr> -->
-      <h1 id="overview" class="hover:underline hover:cursor-pointer p-2 snap-start">Overview</h1>
-      <h1 id="people" class="hover:underline hover:cursor-pointer p-2 snap-start">People</h1>
-      <h1 class="hover:underline hover:cursor-pointer p-2 snap-start">Agenda</h1>
-      <h1 class="hover:underline hover:cursor-pointer p-2 snap-start">Design</h1>
-      <h1 class="hover:underline hover:cursor-pointer p-2 snap-start">Emails</h1>
-      <h1 class="hover:underline hover:cursor-pointer p-2 snap-start">Settings</h1>
+    <div class="mt-6 md:mt-0 px-2">
+      <div class="flex md:gap-x-12 md:flex-wrap md:flex-row overflow-x-scroll no-scrollbar snap-x snap-mandatory">
+        <h1 id="overview" class="hover:cursor-pointer p-2 snap-start relative group">
+          <span>Overview</span>
+          <hr
+            class="w-full inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
+        </h1>
+        <h1 id="people" class="hover:cursor-pointer p-2 snap-start relative group">
+          <span>People</span>
+          <hr
+            class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
+        </h1>
+        <h1 id="agenda" class="hover:cursor-pointer p-2 snap-start relative group">
+          <span>Agenda</span>
+          <hr
+            class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
+        </h1>
+        <h1 id="design" class="hover:cursor-pointer p-2 snap-start relative group">
+          <span>Design</span>
+          <hr
+            class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
+        </h1>
+        <h1 id="emails" class="hover:cursor-pointer p-2 snap-start relative group">
+          <span>Emails</span>
+          <hr
+            class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
+        </h1>
+        <h1 id="settings" class="hover:cursor-pointer p-2 snap-start relative group">
+          <span>Settings</span>
+          <hr
+            class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
+        </h1>
+      </div>
+
+      <hr class="w-full h-px rounded-sm bg-black bg-opacity-30 relative z-0" />
+
     </div>
     <!-- <div class="w-full pb-2 bg-red-200"></div> -->
 
@@ -255,5 +281,6 @@
         isOpen = false;
       }
     </script>
-  </body>
+</body>
+
 </html>
