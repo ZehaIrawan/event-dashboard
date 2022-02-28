@@ -93,7 +93,7 @@
       </div>
       <div class="flex-col flex lg:flex-row justify-between gap-y-6 lg:gap-x-1 w-full md:w-11/12">
         <!-- Event Stats -->
-        <div class="px-2 grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 md:px-4 w-full">
+        <div class="px-2 grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 md:px-4 md:w-2/3">
           <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
             <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
@@ -227,25 +227,33 @@
         </div>
       </div>
     </div>
-  </div>
-  <script>
-//       let isOpen = false;
+    <script>
+      // let isOpen = false;
+      let isOpen = false;
 
-//       document.getElementById('close-icon').style.display = 'none'
 
-//       if(isOpen){
-//         document.getElementById('close-icon').classList.add('hidden');
-//         document.getElementById('hamburger-icon').classList.add('block');
-//       }
+      // if(isOpen){
+      //   document.getElementById('hamburger-icon').style.display = 'none';
+      //   document.getElementById('close-icon').style.display = 'block';
+      // }
 
-//       if(!isOpen){
-//         document.getElementById('close-icon').classList.remove('hidden');
-//         document.getElementById('hamburger-icon').classList.remove('block');
-//       }
-//       function myFunction() {
-//   document.getElementById("myDIV").classList.toggle("newClass");
-// }
-  </script>
-</body>
+      // if(!isOpen){
+      //   document.getElementById('hamburger-icon').style.display = 'block';
+      //   document.getElementById('close-icon').style.display = 'none';
+      // }
 
+      function openNav() {
+        document.getElementById('close-icon').classList.remove = 'hidden';
+        document.getElementById('hamburger-icon').style.display = 'none';
+        document.getElementById('close-icon').style.display = 'block';
+        isOpen = true;
+      }
+
+      function closeNav() {
+        document.getElementById('hamburger-icon').style.display = 'block';
+        document.getElementById('close-icon').style.display = 'none';
+        isOpen = false;
+      }
+    </script>
+  </body>
 </html>
