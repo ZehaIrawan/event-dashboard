@@ -20,7 +20,7 @@
     <div class="flex flex-col w-full px-1 md:px-6">
       <img
          src="{% static 'assets/images/chat.png' %}"
-        class="w-20 absolute right-3 bottom-3"
+        class="hidden md:block w-20 absolute right-3 bottom-3"
         alt="chat icon"
       />
       <!-- Header -->
@@ -61,7 +61,7 @@
             Publish
           </button>
           <button
-            class="flex justify-center items-center gap-x-2 rounded-lg bg-purple-500 text-white px-4 py-2 text-center"
+            class="flex justify-center items-center gap-x-2 rounded-lg bg-purple-500 text-white px-4 py-2 text-center whitespace-nowrap"
           >
             Preview Event
                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +72,7 @@
       </div>
 
       <!-- Tabs -->
-      <div class="flex gap-x-12 flex-wrap mx-2 md:flex-row">
+      <div class="mt-6 md:mt-0 flex md:gap-x-12 flex-wrap mx-2 md:flex-row">
         <hr></hr>
         <h1 id="overview" class="hover:underline hover:cursor-pointer">Overview</h1>
         <h1 id="people">People</h1>
@@ -87,7 +87,7 @@
 
           {% include 'partials/_event_main_card.html' %}
         <!-- Event Stats Header-->
-        <div class="flex justify-between mx-2 md:mx-4 my-4 w-11/12">
+        <div class="flex justify-between mx-2 md:mx-4 my-4  w-full md:w-11/12">
           <h1 class="font-semibold text-lg">Event Stats</h1>
           <button
             class="flex justify-center items-center gap-x-2 rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold"
@@ -105,14 +105,14 @@
         >
           <!-- Event Stats -->
           <div
-            class="grid grid-cols-2 lg:grid-cols-3 gap-6 px-4"
+            class="mx-2 grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 md:px-4"
           >
             <div
-              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
             >
               <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
               <h1 class="font-bold text-lg">3.9K</h1>
-              <div class="flex items-baseline">
+              <div class="flex items-baseline flex-wrap gap-y-2">
 
                 <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z" fill="#27CE9C"/>
@@ -124,11 +124,11 @@
             </div>
 
             <div
-              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
             >
               <h1 class="text-gray-500 font-semibold text-sm">Page Views</h1>
               <h1 class="font-bold text-lg">1.2M</h1>
-              <div class="flex items-baseline">
+              <div class="flex items-baseline flex-wrap gap-y-2">
                  <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z" fill="#27CE9C"/>
 </svg>
@@ -138,7 +138,7 @@
             </div>
 
             <div
-              class="text-left flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+              class="text-left flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
             >
               <h1 class="text-gray-500 font-semibold text-sm">Invited</h1>
               <h1 class="font-bold text-lg">0</h1>
@@ -148,11 +148,11 @@
             </div>
 
             <div
-              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
             >
               <h1 class="text-gray-500 font-semibold text-sm">Revenue</h1>
               <h1 class="font-bold text-lg">$12.6K</h1>
-              <div class="flex items-baseline">
+              <div class="flex items-baseline flex-wrap gap-y-2">
                          <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z" fill="#27CE9C"/>
 </svg>
@@ -162,11 +162,11 @@
             </div>
 
             <div
-              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg"
             >
               <h1 class="text-gray-500 font-semibold text-sm">Attendees</h1>
               <h1 class="font-bold text-lg">2.8K</h1>
-              <div class="flex items-baseline">
+              <div class="flex items-baseline flex-wrap gap-y-2">
                 <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29558 7.67579C7.21517 7.77432 7.09923 7.85618 6.95946 7.9131C6.81969 7.97002 6.66104 8 6.49954 8C6.33803 8 6.17939 7.97002 6.03962 7.9131C5.89985 7.85618 5.78391 7.77432 5.7035 7.67579L0.133673 1.00961C-0.237541 0.565086 0.208402 0 0.929709 0L12.0702 0C12.7923 0 13.2374 0.565657 12.8662 1.00961L7.29558 7.67579Z" fill="#FE457E"/>
 </svg>
@@ -177,15 +177,15 @@
             </div>
 
             <div
-              class="flex flex-col gap-y-2 bg-white py-6 px-12 border border-gray-200 rounded-lg"
+              class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg "
             >
               <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
               <h1 class="font-bold text-lg">3.9K</h1>
-              <div class="flex items-baseline">
+              <div class="flex items-baseline flex-wrap gap-y-2">
                 <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z" fill="#27CE9C"/>
 </svg>
-                <span class="mr-2 text-xs text-green-400 font-semibold">+21%</span>
+<span class="mr-2 text-xs text-green-400 font-semibold">+21%</span>
                 <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
               </div>
             </div>
@@ -244,6 +244,23 @@
         </div>
       </div>
     </div>
-    <script></script>
+    <script>
+//       let isOpen = false;
+
+//       document.getElementById('close-icon').style.display = 'none'
+
+//       if(isOpen){
+//         document.getElementById('close-icon').classList.add('hidden');
+//         document.getElementById('hamburger-icon').classList.add('block');
+//       }
+
+//       if(!isOpen){
+//         document.getElementById('close-icon').classList.remove('hidden');
+//         document.getElementById('hamburger-icon').classList.remove('block');
+//       }
+//       function myFunction() {
+//   document.getElementById("myDIV").classList.toggle("newClass");
+// }
+    </script>
   </body>
 </html>
