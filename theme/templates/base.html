@@ -11,7 +11,7 @@
   {% tailwind_css %}
 </head>
 
-<body class="leading-normal tracking-normal flex flex-col md:flex-row w-full bg-gray-50 pb-12 md:pb-0 ">
+<body class="leading-normal tracking-normal flex flex-col md:flex-row w-full bg-primary-bg-100 pb-12 md:pb-0 ">
 
   {% include 'partials/_sidebar.html' %}
 
@@ -22,7 +22,7 @@
     <!-- Header -->
     <div class="mt-6 md:mb-8 mx-2 flex flex-wrap justify-between md:h-12 items-center">
       <div class="flex items-center gap-x-6">
-        <div class="bg-gray-200 py-2 px-3 rounded-lg">
+        <div class="bg-primary-button-100 py-2 px-3 rounded-lg">
           <img class="w-auto h-5" src="{% static 'assets/images/clickup-logo.svg' %}" alt="header1" />
 
         </div>
@@ -43,13 +43,13 @@
       </div>
       <div class="mt-4 md:mt-0 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-4 items-center w-full md:w-auto md:text-sm">
         <img class="ml-auto w-16 h-6" src="{% static 'assets/images/green-chain.svg' %}" alt="chain" />
-        <h1>Analysis</h1>
+        <h1 class="font-medium">Analysis</h1>
 
-        <button class="rounded-lg text-purple-500 bg-purple-100 px-2 py-2 text-center">
+        <button class="font-medium rounded-lg text-purple-500 bg-primary-button-300 px-2 py-2 text-center hover:bg-hover-button-100">
           Publish
         </button>
         <button
-          class="flex justify-center items-center gap-x-2 rounded-lg bg-purple-500 text-white px-4 py-2 text-center whitespace-nowrap">
+          class="font-medium flex justify-center items-center gap-x-2 rounded-lg bg-primary-button-200 text-white px-4 py-2 text-center whitespace-nowrap hover:bg-hover-button-200">
           Preview Event
           <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -62,32 +62,32 @@
     <!-- Tabs -->
     <div class="mt-6 md:mt-0 px-2">
       <div class="flex md:gap-x-12 md:flex-wrap md:flex-row overflow-x-scroll no-scrollbar snap-x snap-mandatory font-normal text-primary-text-100">
-        <h1 id="overview" class="hover:cursor-pointer p-2 snap-start relative group">
+        <h1 id="overview" class="hover:cursor-pointer p-2 snap-start relative group text-primary-text-300">
           <span>Overview</span>
           <hr
             class="w-full inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
         </h1>
-        <h1 id="people" class="hover:cursor-pointer p-2 snap-start relative group">
+        <h1 id="people" class="hover:cursor-pointer p-2 snap-start relative group hover:text-primary-text-300">
           <span>People</span>
           <hr
             class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
         </h1>
-        <h1 id="agenda" class="hover:cursor-pointer p-2 snap-start relative group">
+        <h1 id="agenda" class="hover:cursor-pointer hover:text-primary-text-300 p-2 snap-start relative group">
           <span>Agenda</span>
           <hr
             class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
         </h1>
-        <h1 id="design" class="hover:cursor-pointer p-2 snap-start relative group">
+        <h1 id="design" class="hover:cursor-pointer p-2 snap-start relative group hover:text-primary-text-300">
           <span>Design</span>
           <hr
             class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
         </h1>
-        <h1 id="emails" class="hover:cursor-pointer p-2 snap-start relative group">
+        <h1 id="emails" class="hover:cursor-pointer p-2 snap-start relative group hover:text-primary-text-300">
           <span>Emails</span>
           <hr
             class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
         </h1>
-        <h1 id="settings" class="hover:cursor-pointer p-2 snap-start relative group">
+        <h1 id="settings" class="hover:cursor-pointer p-2 snap-start relative group hover:text-primary-text-300">
           <span>Settings</span>
           <hr
             class="group-hover:w-full w-0 inset-x-0 h-1 rounded-md bg-red-500 absolute -bottom-px transition-all duration-300" />
@@ -103,9 +103,9 @@
       {% include 'partials/_event_main_card.html' %}
       <!-- Event Stats Header-->
       <div class="flex justify-between items-center px-2 md:pl-4 md:mt-16 my-4 w-full md:w-custom md:text-xs">
-        <h1 class="font-semibold text-lg">Event Stats</h1>
+        <h1 class="font-medium text-base text-primary-text-200">Event Stats</h1>
         <button
-          class="flex justify-center items-center gap-x-2 rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold md:mr-2">
+          class="flex justify-center items-center gap-x-2 rounded-lg text-purple-500 bg-primary-button-300 px-4 py-2 text-center font-semibold md:mr-2 hover:bg-hover-button-100">
           <!-- Download Icon -->
           <svg width="13" height="15" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -119,8 +119,8 @@
       <div class="flex-col flex lg:flex-row justify-between gap-y-6 lg:gap-x-4 w-full md:w-custom">
         <!-- Event Stats -->
         <div class="px-2 grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 md:pl-4 md:w-7/12">
-          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 drop-shadow-md rounded-lg">
+            <h1 class="text-primary-text-100 font-medium text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
             <div class="flex items-baseline flex-wrap gap-y-2">
 
@@ -131,12 +131,12 @@
               </svg>
 
               <span class="text-xs text-green-400 font-semibold mr-2">+21%</span>
-              <h1 class="text-gray-500 text-xs  whitespace-nowrap">since last week</h1>
+              <h1 class="text-primary-text-100  text-xs  whitespace-nowrap">since last week</h1>
             </div>
           </div>
 
           <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Page Views</h1>
+            <h1 class="text-primary-text-100  font-semibold text-sm">Page Views</h1>
             <h1 class="font-bold text-lg">1.2M</h1>
             <div class="flex items-baseline flex-wrap gap-y-2">
               <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,20 +145,20 @@
                   fill="#27CE9C" />
               </svg>
               <span class="text-xs text-green-400 font-semibold mr-2">+21%</span>
-              <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+              <h1 class="text-primary-text-100  text-xs whitespace-nowrap">since last week</h1>
             </div>
           </div>
 
           <div class="text-left flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Invited</h1>
+            <h1 class="text-primary-text-100  font-semibold text-sm">Invited</h1>
             <h1 class="font-bold text-lg">0</h1>
             <div class="flex gap-4">
-              <h1 class="text-gray-500 text-xs">No invites sent yet</h1>
+              <h1 class="text-primary-text-100  text-xs">No invites sent yet</h1>
             </div>
           </div>
 
           <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Revenue</h1>
+            <h1 class="text-primary-text-100  font-semibold text-sm">Revenue</h1>
             <h1 class="font-bold text-lg">$12.6K</h1>
             <div class="flex items-baseline flex-wrap gap-y-2">
               <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,12 +167,12 @@
                   fill="#27CE9C" />
               </svg>
               <span class="text-xs text-green-400 font-semibold mr-2">+11%</span>
-              <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+              <h1 class="text-primary-text-100  text-xs whitespace-nowrap">since last week</h1>
             </div>
           </div>
 
           <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-gray-500 font-semibold text-sm">Attendees</h1>
+            <h1 class="text-primary-text-100  font-semibold text-sm">Attendees</h1>
             <h1 class="font-bold text-lg">2.8K</h1>
             <div class="flex items-baseline flex-wrap gap-y-2">
               <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -182,12 +182,12 @@
               </svg>
 
               <span class="mr-2 text-xs text-red-400 font-semibold">-21%</span>
-              <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+              <h1 class="text-primary-text-100  text-xs whitespace-nowrap">since last week</h1>
             </div>
           </div>
 
           <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg ">
-            <h1 class="text-gray-500 font-semibold text-sm">Registrations</h1>
+            <h1 class="text-primary-text-100 font-semibold text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
             <div class="flex items-baseline flex-wrap gap-y-2">
               <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +196,7 @@
                   fill="#27CE9C" />
               </svg>
               <span class="mr-2 text-xs text-green-400 font-semibold">+21%</span>
-              <h1 class="text-gray-500 text-xs whitespace-nowrap">since last week</h1>
+              <h1 class="text-primary-text-100 text-xs whitespace-nowrap">since last week</h1>
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@
             </div>
           </div>
 
-          <a href="#" class="mt-6 block text-purple-500 font-medium">More details →</a>
+          <a href="#" class="mt-6 block text-purple-500 font-medium text-sm">More details →</a>
         </div>
       </div>
     </div>

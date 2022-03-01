@@ -54,6 +54,14 @@ module.exports = {
     extend: {
       colors: {
         'primary-text-100': '#9295B3',
+        'primary-text-200': '#4E5283',
+        'primary-text-300': '#272838',
+        'primary-button-100': '#F6F6F9',
+        'primary-bg-100': '#FBFCFD',
+        'primary-button-200': '#6E44FF',
+        'primary-button-300': '#EDEAFD',
+        'hover-button-100': '#d9d3fb',
+        'hover-button-200': '#825eff',
       },
       width: {
         custom: '87.333333%;',
