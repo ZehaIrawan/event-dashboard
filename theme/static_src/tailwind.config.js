@@ -52,6 +52,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        'primary-text-100': '#9295B3',
+      },
+      width: {
+        custom: '87.333333%;',
+      },
       fontFamily: {
         AvenirNext: 'AvenirNextLTW01-Regular',
       },
