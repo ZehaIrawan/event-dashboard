@@ -1,48 +1,81 @@
 {% load static%}
 <!-- Main Card -->
-<div class="flex border-2 rounded-lg my-6 mx-2 md:mx-4 p-4 w-11/12">
+<!-- <div class="flex border-2 rounded-lg my-6 mx-2 md:mx-4 p-4 w-full md:w-11/12"> -->
+<div class="flex border-2 rounded-lg my-6 mx-2 md:mx-4 px-2 py-6 md:p-4 md:w-11/12">
   <div class="px-4 w-full">
     <div class="flex justify-between md:w-full flex-wrap">
-      <div class="flex justify-between w-full md:w-max md:justify-start ">
-      <div
-        class="bg-red-100 px-3 rounded-lg h-12 md:h-12 flex justify-center items-center md:mr-4"
-      >
-        <svg
-          width="21"
-          height="13"
-          viewBox="0 0 21 13"
+      <div class="flex justify-start gap-x-6 md:gap-0 w-full md:w-max md:justify-start">
+        <div
+          class="bg-red-100 px-3 rounded-lg h-12 md:h-12 flex justify-center items-center md:mr-4"
+        >
+          <svg
+            width="21"
+            height="13"
+            viewBox="0 0 21 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 2.6C0 1.91044 0.273928 1.24912 0.761522 0.761522C1.24912 0.273928 1.91044 1.80066e-08 2.6 1.80066e-08H12.35C12.9806 -7.41624e-05 13.5898 0.229051 14.064 0.644706C14.5383 1.06036 14.8453 1.63421 14.9279 2.2594L18.9709 0.4628C19.1688 0.374623 19.3856 0.337303 19.6016 0.354231C19.8176 0.37116 20.0259 0.4418 20.2076 0.559731C20.3894 0.677663 20.5388 0.839145 20.6422 1.0295C20.7457 1.21986 20.7999 1.43305 20.8 1.6497V11.3503C20.7998 11.5668 20.7456 11.7798 20.6422 11.97C20.5388 12.1602 20.3896 12.3216 20.208 12.4395C20.0264 12.5574 19.8183 12.628 19.6025 12.6451C19.3867 12.6622 19.17 12.6251 18.9722 12.5372L14.9279 10.7406C14.8453 11.3658 14.5383 11.9396 14.064 12.3553C13.5898 12.7709 12.9806 13.0001 12.35 13H2.6C1.91044 13 1.24912 12.7261 0.761522 12.2385C0.273928 11.7509 0 11.0896 0 10.4V2.6ZM14.95 9.3275L19.5 11.3503V1.6497L14.95 3.6725V9.3275ZM2.6 1.3C2.25522 1.3 1.92456 1.43696 1.68076 1.68076C1.43696 1.92456 1.3 2.25522 1.3 2.6V10.4C1.3 10.7448 1.43696 11.0754 1.68076 11.3192C1.92456 11.563 2.25522 11.7 2.6 11.7H12.35C12.6948 11.7 13.0254 11.563 13.2692 11.3192C13.513 11.0754 13.65 10.7448 13.65 10.4V2.6C13.65 2.25522 13.513 1.92456 13.2692 1.68076C13.0254 1.43696 12.6948 1.3 12.35 1.3H2.6Z"
+              fill="#FF5280"
+            />
+            <circle cx="7.14995" cy="5.84999" r="1.95" fill="#FF5280" />
+          </svg>
+        </div>
+        <div>
+          <h1>Summit</h1>
+          <h1 class="font-bold">Passion Economy 2021</h1>
+        </div>
+      </div>
+
+      <div class="flex justify-between gap-x-3 w-full md:w-min mt-4 md:ml-14">
+        <button
+          class="whitespace-nowrap flex justify-between items-center rounded-lg text-purple-500 bg-purple-100 px-4 py-2 font-semibold"
+        >
+        <!-- Link icon -->
+        <div class="w-5 mr-2">
+          <svg
+          viewBox="0 0 40 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-        >
+          >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M0 2.6C0 1.91044 0.273928 1.24912 0.761522 0.761522C1.24912 0.273928 1.91044 1.80066e-08 2.6 1.80066e-08H12.35C12.9806 -7.41624e-05 13.5898 0.229051 14.064 0.644706C14.5383 1.06036 14.8453 1.63421 14.9279 2.2594L18.9709 0.4628C19.1688 0.374623 19.3856 0.337303 19.6016 0.354231C19.8176 0.37116 20.0259 0.4418 20.2076 0.559731C20.3894 0.677663 20.5388 0.839145 20.6422 1.0295C20.7457 1.21986 20.7999 1.43305 20.8 1.6497V11.3503C20.7998 11.5668 20.7456 11.7798 20.6422 11.97C20.5388 12.1602 20.3896 12.3216 20.208 12.4395C20.0264 12.5574 19.8183 12.628 19.6025 12.6451C19.3867 12.6622 19.17 12.6251 18.9722 12.5372L14.9279 10.7406C14.8453 11.3658 14.5383 11.9396 14.064 12.3553C13.5898 12.7709 12.9806 13.0001 12.35 13H2.6C1.91044 13 1.24912 12.7261 0.761522 12.2385C0.273928 11.7509 0 11.0896 0 10.4V2.6ZM14.95 9.3275L19.5 11.3503V1.6497L14.95 3.6725V9.3275ZM2.6 1.3C2.25522 1.3 1.92456 1.43696 1.68076 1.68076C1.43696 1.92456 1.3 2.25522 1.3 2.6V10.4C1.3 10.7448 1.43696 11.0754 1.68076 11.3192C1.92456 11.563 2.25522 11.7 2.6 11.7H12.35C12.6948 11.7 13.0254 11.563 13.2692 11.3192C13.513 11.0754 13.65 10.7448 13.65 10.4V2.6C13.65 2.25522 13.513 1.92456 13.2692 1.68076C13.0254 1.43696 12.6948 1.3 12.35 1.3H2.6Z"
-            fill="#FF5280"
+          d="M30 0H22V4H30C33.3 4 36 6.7 36 10C36 13.3 33.3 16 30 16H22V20H30C35.52 20 40 15.52 40 10C40 4.48 35.52 0 30 0ZM18 16H10C6.7 16 4 13.3 4 10C4 6.7 6.7 4 10 4H18V0H10C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20H18V16ZM12 8H28V12H12V8Z"
+          fill="currentColor"
           />
-          <circle cx="7.14995" cy="5.84999" r="1.95" fill="#FF5280" />
         </svg>
       </div>
-      <div class="">
-        <h1>Summit</h1>
-        <h1 class="font-bold">Passion Economy 2021</h1>
+      <span class="block">Copy Link</span>
+    </button>
+    <button
+    class="whitespace-nowrap flex justify-between items-center rounded-lg text-purple-500 bg-purple-100 px-4 py-2 font-semibold"
+    >
+        <span class="block mr-2">Manage Event</span>
+
+          <!-- Arrow Icon -->
+          <div class="w-5">
+
+
+          <svg
+            viewBox="0 0 28 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 7.5H27M27 7.5L20.4393 1M27 7.5L20.4393 14"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+           </div>
+        </button>
       </div>
     </div>
-
-      <div class="flex w-min mt-4 md:ml-14">
-      <button
-        class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center mr-4 font-semibold"
-      >
-        Copy Link
-      </button>
-      <button
-        class="rounded-lg text-purple-500 bg-purple-100 px-4 py-2 text-center font-semibold"
-      >
-        Manage Event
-      </button>
-    </div>
-    </div>
-
 
     <div class="mt-6 flex flex-col md:flex-row gap-x-10 gap-y-3 md:ml-14">
       <div class="flex flex-row md:flex-col justify-between gap-4 md:gap-y-2">
@@ -56,7 +89,7 @@
       </div>
 
       <div class="flex flex-row md:flex-col gap-y-2 justify-between">
-        <h1 class="text-gray-500 text-sm  font-semibold">Event Stats</h1>
+        <h1 class="text-gray-500 text-sm font-semibold">Event Stats</h1>
         <span class="text-sm">Ended</span>
       </div>
 
