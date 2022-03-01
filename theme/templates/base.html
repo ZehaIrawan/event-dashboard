@@ -8,6 +8,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="{%  static 'favicon.ico' %}">
   {% tailwind_css %}
 </head>
 
@@ -20,7 +21,7 @@
     <img src="{% static 'assets/images/chat.png' %}" class="hidden md:block w-20 absolute right-3 bottom-3"
       alt="chat icon" />
     <!-- Header -->
-    <div class="mt-6 md:mb-8 mx-2 flex flex-wrap justify-between md:h-12 items-center">
+    <div class="mt-8 md:mb-5 mx-2 flex flex-wrap justify-between md:h-12 items-center">
       <div class="flex items-center gap-x-6">
         <div class="bg-primary-button-100 py-2 px-3 rounded-lg">
           <img class="w-auto h-5" src="{% static 'assets/images/clickup-logo.svg' %}" alt="header1" />
@@ -41,15 +42,15 @@
         </svg>
 
       </div>
-      <div class="mt-4 md:mt-0 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-4 items-center w-full md:w-auto md:text-sm">
+      <div class="mt-4 md:mt-0 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-4 items-center w-full md:w-auto md:text-sm md:flex">
         <img class="ml-auto w-16 h-6" src="{% static 'assets/images/green-chain.svg' %}" alt="chain" />
-        <h1 class="font-normal text-primary-text-100">Analysis</h1>
+        <h1 class="font-normal text-primary-text-100 md:mr-6">Analysis</h1>
 
-        <button class="font-medium rounded-lg text-purple-500 bg-primary-button-300 px-2 py-2 text-center hover:bg-hover-button-100">
+        <button class="font-medium rounded-lg text-purple-500 bg-primary-button-300  px-6 py-3 text-center hover:bg-hover-button-100 md:w-min md:self-end ">
           Publish
         </button>
         <button
-          class="font-medium flex justify-center items-center gap-x-2 rounded-lg bg-primary-button-200 text-white px-4 py-2 text-center whitespace-nowrap hover:bg-hover-button-200">
+          class="font-medium flex justify-center items-center gap-x-2 rounded-lg bg-primary-button-200 text-white px-6 py-3 text-center whitespace-nowrap hover:bg-hover-button-200">
           Preview Event
           <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -102,7 +103,7 @@
 
       {% include 'partials/_event_main_card.html' %}
       <!-- Event Stats Header-->
-      <div class="flex justify-between items-center px-2 md:pl-4 md:mt-8 my-4 w-full md:w-custom md:text-xs">
+      <div class="flex justify-between items-center px-2 md:pl-4 md:mt-16 my-4 w-full md:w-custom md:text-xs">
         <h1 class="font-medium text-base text-primary-text-200">Event Stats</h1>
         <button
           class="flex justify-center items-center gap-x-2 rounded-lg text-purple-500 bg-primary-button-300 px-4 py-2 text-center font-semibold md:mr-2 hover:bg-hover-button-100">
@@ -118,11 +119,11 @@
       </div>
       <div class="flex-col flex lg:flex-row justify-between gap-y-6 lg:gap-x-12 w-full md:w-custom">
         <!-- Event Stats -->
-        <div class="px-2 grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 md:pl-4 md:w-7/12">
-          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 drop-shadow-md rounded-lg">
+        <div class="px-2 grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 md:pl-4 md:w-7/12 md:pb-1">
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-6 drop-shadow rounded-lg">
             <h1 class="text-primary-text-100 font-medium text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
-            <div class="flex items-baseline flex-wrap gap-y-2">
+            <div class="flex items-baseline flex-wrap md:flex-nowrap gap-y-2">
 
               <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -135,10 +136,10 @@
             </div>
           </div>
 
-          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-primary-text-100  font-semibold text-sm">Page Views</h1>
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-6 rounded-lg drop-shadow">
+            <h1 class="text-primary-text-100  font-medium text-sm">Page Views</h1>
             <h1 class="font-bold text-lg">1.2M</h1>
-            <div class="flex items-baseline flex-wrap gap-y-2">
+            <div class="flex items-baseline flex-wrap md:flex-nowrap gap-y-2">
               <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z"
@@ -149,18 +150,18 @@
             </div>
           </div>
 
-          <div class="text-left flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-primary-text-100  font-semibold text-sm">Invited</h1>
+          <div class="text-left flex flex-col gap-y-2 bg-white p-4 md:px-6 rounded-lg drop-shadow ">
+            <h1 class="text-primary-text-100  font-medium text-sm">Invited</h1>
             <h1 class="font-bold text-lg">0</h1>
             <div class="flex gap-4">
-              <h1 class="text-primary-text-100  text-xs">No invites sent yet</h1>
+              <h1 class="text-primary-text-100 md:whitespace-nowrap text-xs">No invites sent yet</h1>
             </div>
           </div>
 
-          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-primary-text-100  font-semibold text-sm">Revenue</h1>
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-6 drop-shadow rounded-lg">
+            <h1 class="text-primary-text-100  font-medium text-sm">Revenue</h1>
             <h1 class="font-bold text-lg">$12.6K</h1>
-            <div class="flex items-baseline flex-wrap gap-y-2">
+            <div class="flex items-baseline flex-wrap md:flex-nowrap gap-y-2">
               <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z"
@@ -171,10 +172,10 @@
             </div>
           </div>
 
-          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg">
-            <h1 class="text-primary-text-100  font-semibold text-sm">Attendees</h1>
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-6 drop-shadow rounded-lg">
+            <h1 class="text-primary-text-100 font-medium text-sm">Attendees</h1>
             <h1 class="font-bold text-lg">2.8K</h1>
-            <div class="flex items-baseline flex-wrap gap-y-2">
+            <div class="flex text-left items-baseline flex-wrap md:flex-nowrap gap-y-2">
               <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M7.29558 7.67579C7.21517 7.77432 7.09923 7.85618 6.95946 7.9131C6.81969 7.97002 6.66104 8 6.49954 8C6.33803 8 6.17939 7.97002 6.03962 7.9131C5.89985 7.85618 5.78391 7.77432 5.7035 7.67579L0.133673 1.00961C-0.237541 0.565086 0.208402 0 0.929709 0L12.0702 0C12.7923 0 13.2374 0.565657 12.8662 1.00961L7.29558 7.67579Z"
@@ -186,10 +187,10 @@
             </div>
           </div>
 
-          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-12 border border-gray-200 rounded-lg ">
-            <h1 class="text-primary-text-100 font-semibold text-sm">Registrations</h1>
+          <div class="flex flex-col gap-y-2 bg-white p-4 md:px-6 drop-shadow rounded-lg ">
+            <h1 class="text-primary-text-100 font-medium text-sm">Registrations</h1>
             <h1 class="font-bold text-lg">3.9K</h1>
-            <div class="flex items-baseline flex-wrap gap-y-2">
+            <div class="flex items-baseline flex-wrap md:flex-nowrap gap-y-2">
               <svg class="mr-1" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M5.70442 0.324205C5.78483 0.22568 5.90077 0.143823 6.04054 0.0868993C6.18031 0.0299754 6.33896 0 6.50046 0C6.66197 0 6.82061 0.0299754 6.96038 0.0868993C7.10015 0.143823 7.21609 0.22568 7.2965 0.324205L12.8663 6.99039C13.2375 7.43491 12.7916 8 12.0703 8H0.929822C0.207702 8 -0.237429 7.43434 0.133785 6.99039L5.70442 0.324205Z"
@@ -204,8 +205,8 @@
         <!-- Top Sessions -->
         <div class="px-2 md:mt-2 w-full lg:w-5/12 md:p-0 ">
           <div class="flex justify-between">
-            <span class="block">Top Sessions</span>
-            <span class="flex justify-center items-center gap-x-2 hover:cursor-pointer">By attendance
+            <span class="block text-sm text-primary-text-200">Top Sessions</span>
+            <span class="flex justify-center items-center gap-x-2 hover:cursor-pointer text-sm text-primary-text-200 font-medium">By attendance
               <!-- Chevron -->
               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L5 5L9 1" stroke="black" stroke-width="1.5" stroke-linecap="round"
@@ -218,32 +219,32 @@
             <!-- Session Component -->
             <div class="flex flex-col gap-2">
               <div class="flex justify-between">
-                <span class="block">Keynore - The future of remote work</span>
+                <span class="block text-sm">Keynote - The future of remote work</span>
                 <span class="block">102</span>
               </div>
               <div class="w-full rounded-2xl bg-green-200 h-2">
-                <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
+                <div class="bg-green-400 h-2 rounded-lg w-10/12"></div>
               </div>
             </div>
 
             <!-- Session Component -->
             <div class="flex flex-col gap-2">
               <div class="flex justify-between">
-                <span class="block">Keynore - The future of remote work</span>
-                <span class="block">102</span>
+                <span class="block text-sm">The Remote Future is already here...</span>
+                <span class="block">91</span>
               </div>
               <div class="w-full rounded-2xl bg-green-200 h-2">
-                <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
+                <div class="bg-green-400 h-2 rounded-lg w-8/12"></div>
               </div>
             </div>
             <!-- Session Component -->
             <div class="flex flex-col gap-2">
               <div class="flex justify-between">
-                <span class="block">Keynore - The future of remote work</span>
-                <span class="block">102</span>
+                <span class="block text-sm">Defining Careers Progression Models...</span>
+                <span class="block">89</span>
               </div>
               <div class="w-full rounded-2xl bg-green-200 h-2">
-                <div class="bg-green-400 h-2 rounded-lg w-2/3"></div>
+                <div class="bg-green-400 h-2 rounded-lg w-1/2"></div>
               </div>
             </div>
           </div>

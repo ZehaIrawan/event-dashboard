@@ -52,6 +52,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      boxShadow: {
+      'all': '0 0 0 2px rgba(0, 0, 0, 0.25)',
+      //  box-shadow: 0 0 20px rgba(115,115,115,0.75);
+      },
       colors: {
         'primary-text-100': '#9295B3',
         'primary-text-200': '#4E5283',
